@@ -5,7 +5,7 @@
   },
   "name": "boletonode",
   "description": "Módulo para geração de boleto bancário baseado.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/luiz-simples/boletonode",
   "repository": {
     "type": "git",
