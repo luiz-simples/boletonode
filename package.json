@@ -13,14 +13,36 @@
     "url": "git://github.com/andersonloyola/boletonode.git"
   },
   "dependencies": {
-    "combyne" : "*",
-    "phpjs" : "*"
+    "swig": "^1.4.2",
   },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
     "node": "*"
   },
-  "readme": "",
-  "readmeFilename": "README.md"
+  "readme": "# Módulo BoletoNode V0.1\n\nBoletoNode baseado no sistema BoletoPHP\n\nAqueles que tiverem interessados em cooperar por favor entrem em contato\n\nAtualmente somente CEF SICOB em funcionamento\n\nEstamos trabalhando para adicionar mais boletos, quem tiver interesse email@andersonloyola.com.br\n\n\n# Exemplo\n\n``` sh\nexports.index = function(req, res){\n\t//Chama o boletonode\n\tboletonode = require('boletonode');\n\n\tdadosboleto = new Object();\n\tdadosboleto.dias_prazo_pagto = 5;\n\tdadosboleto.taxa = 2.95;\n\tdadosboleto.valor_cobrado = '2950,00';\n\n\tdadosboleto.inicio_nosso_numero = '80';\n\tdadosboleto.nosso_numero = \"19525086\";\n\tdadosboleto.numero_documento = \"27.030195.10\";\n\n\tdadosboleto.sacado = \"Nome do seu Cliente\";\n\tdadosboleto.endereco1 = \"Endereço do seu Cliente\";\n\tdadosboleto.endereco2 = \"Cidade - Estado - CEP: 00000-000\";\n\n\tdadosboleto.demonstrativo1 = \"Pagamento de Compra na Loja Nonononono\";\n\tdadosboleto.demonstrativo2 = \"Mensalidade referente a nonon nonooon nononon\";\n\tdadosboleto.demonstrativo3 = \"NodeBoleto\";\n\n\tdadosboleto.instrucoes1 = \"- Sr. Caixa, cobrar multa de 2% após o vencimento\";\n\tdadosboleto.instrucoes2 = \"- Receber até 10 dias após o vencimento\";\n\tdadosboleto.instrucoes3 = \"- Em caso de dúvidas entre em contato conosco: xxxx@xxxx.com.br\";\n\tdadosboleto.instrucoes4 = \"&nbsp; Emitido pelo sistema Projeto BoletoPhp - www.boletophp.com.br\";\n\n\t// DADOS DA SUA CONTA - CEF\n\tdadosboleto.agencia = \"0998\"; // Num da agencia, sem digito\n\tdadosboleto.conta = \"1686\"; \t// Num da conta, sem digito\n\tdadosboleto.conta_dv = \"3\"; \t// Digito do Num da conta\n\n\t// DADOS PERSONALIZADOS - CEF\n\tdadosboleto.conta_cedente = \"437\"; // ContaCedente do Cliente, sem digito (Somente Números)\n\tdadosboleto.conta_cedente_dv = \"4\"; // Digito da ContaCedente do Cliente\n\tdadosboleto.carteira = \"SR\";  // Código da Carteira: pode ser SR (Sem Registro) ou CR (Com Registro) - (Confirmar com gerente qual usar)\n\n\t// SEUS DADOS\n\tdadosboleto.identificacao = \"BoletoPhp - Código Aberto de Sistema de Boletos\";\n\tdadosboleto.cpf_cnpj = \"\";\n\tdadosboleto.endereco = \"Coloque o endereço da sua empresa aqui\";\n\tdadosboleto.cidade_uf = \"Cidade / Estado\";\n\tdadosboleto.cedente = \"Coloque a Razão Social da sua empresa aqui\";\n\n  \tboletonode.cef.sicob(dadosboleto, function(html){\n  \t\tres.send(html, { 'Content-Type': 'text/html' }, 200);\t\n  \t});\n  \t\n};\n```\n",
+  "readmeFilename": "README.md",
+  "_id": "boletonode@0.1.0",
+  "dist": {
+    "shasum": "e354ca437427e0c004fd1275850533d1c3f6420c",
+    "tarball": "http://registry.npmjs.org/boletonode/-/boletonode-0.1.0.tgz"
+  },
+  "_from": "boletonode@>=0.1.0 <0.2.0",
+  "_npmVersion": "1.2.2",
+  "_npmUser": {
+    "name": "andersonloyola",
+    "email": "email@andersonloyola.com.br"
+  },
+  "maintainers": [
+    {
+      "name": "andersonloyola",
+      "email": "email@andersonloyola.com.br"
+    }
+  ],
+  "directories": {},
+  "_shasum": "e354ca437427e0c004fd1275850533d1c3f6420c",
+  "_resolved": "https://registry.npmjs.org/boletonode/-/boletonode-0.1.0.tgz",
+  "bugs": {
+    "url": "https://github.com/andersonloyola/boletonode/issues"
+  }
 }
