@@ -1,37 +1,28 @@
 {
-  "author": {
-    "name": "luiz-simples",
-    "email": "luiz.simples@gmail.com"
-  },
   "name": "boletonode",
   "description": "Módulo para geração de boleto bancário baseado.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/luiz-simples/boletonode",
   "repository": {
     "type": "git",
     "url": "git://github.com/luiz-simples/boletonode.git"
   },
+
+  "scripts": {
+    "postinstall": "npm install swig"
+  },
+
   "dependencies": {
     "swig": "^1.4.2"
   },
-  "devDependencies": {},
-  "optionalDependencies": {},
+
   "engines": {
-    "node": "*"
+    "node": "4.1.1"
   },
 
   "readme": "# Módulo BoletoNode V0.1.1\n\nBoletoNode baseado no sistema BoletoPHP",
   "readmeFilename": "README.md",
-  "_id": "boletonode@0.1.0",
 
-  "maintainers": [
-    {
-      "name": "luiz-simples",
-      "email": "luiz.simples@gmail.com"
-    }
-  ],
-
-  "directories": {},
   "bugs": {
     "url": "https://github.com/luiz-simples/boletonode/issues"
   }
